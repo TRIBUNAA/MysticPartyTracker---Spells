@@ -1,0 +1,1 @@
+D:\2DSLeoEVIni\PAM-I\MysticPartyTracker\MysticPartyTracker\MysticPartyTracker.csproj;x64

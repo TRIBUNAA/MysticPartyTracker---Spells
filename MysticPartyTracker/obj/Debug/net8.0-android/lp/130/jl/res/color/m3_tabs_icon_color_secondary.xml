@@ -1,0 +1,18 @@
+= r && !!b.createRange().compareNode, t = s ? l : n.parentNode, l = a.opera && "[object Opera]" == o.call(a.opera), l = !!b.attachEvent && !l, u = r ? "object" : l ? "script" : "img", v = l ? "script" : u, w = Array.isArray || function (a) {
+        return "[object Array]" == o.call(a)
+      }, x = [], y = {}, z = {
+    timeout: function (a, b) {
+      return b.length && (a.timeout = b[0]), a
+    }
+  }, A, B;
+  B = function (a) {
+    function b(a) {
+      var a = a.split("!"), b = x.length, c = a.pop(), d = a.length, c = {url: c, origUrl: c, prefixes: a}, e, f, g;
+      for (f = 0; f < d; f++)g = a[f].split("="), (e = z[g.shift()]) && (c = e(c, g));
+      for (f = 0; f < b; f++)c = x[f](c);
+      return c
+    }
+
+    function g(a, e, f, g, h) {
+      var i = b(a), j = i.autoCallback;
+      i.url.split(".").pop().split("?").shift(), i.bypass || (e && (e = d(e) ? e : e[a] || e[g] || e[a.split("/").pop().split("?")[0]]), i.instead ? i.instead(a, e, f, g, h) : (y[i.url] ? i.noexec = !0 : y[i.url] = 1, f.load(i.url, i.forceCSS || !i.forceJS && "css" == i.url.split(".").pop().split("?").shift() ? "c" : c, i.noexec, i.attrs, i.t

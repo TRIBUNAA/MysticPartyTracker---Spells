@@ -1,0 +1,22 @@
+   if (k)return a.createDocumentFragment();
+      c = c || n(a);
+      var d = c.frag.cloneNode(), e = 0, f = m(), g = f.length;
+      for (; e < g; e++)d.createElement(f[e]);
+      return d
+    }
+
+    function q(a, b) {
+      b.cache || (b.cache = {}, b.createElem = a.createElement, b.createFrag = a.createDocumentFragment, b.frag = b.createFrag()), a.createElement = function (c) {
+        return s.shivMethods ? o(c, a, b) : b.createElem(c)
+      }, a.createDocumentFragment = Function("h,f", "return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&(" + m().join().replace(/[\w\-]+/g, function (a) {
+            return b.createElem(a), b.frag.createElement(a), 'c("' + a + '")'
+          }) + ");return n}")(s, b.frag)
+    }
+
+    function r(a) {
+      a || (a = b);
+      var c = n(a);
+      return s.shivCSS && !g && !c.hasCSS && (c.hasCSS = !!l(a, "article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")), k || q(a, c), a
+    }
+
+    var c = "3.7.0", d = a.html5 || {}, e = /^<|^(?:button|map|select|textarea|object|ifra
