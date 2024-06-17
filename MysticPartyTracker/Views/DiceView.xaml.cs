@@ -1,6 +1,6 @@
 using MysticPartyTracker.Models;
 using MysticPartyTracker.ViewModels;
-namespace MysticPartyTracker.View;
+namespace MysticPartyTracker.Views;
 
 public partial class DiceView : ContentPage
 {
@@ -56,8 +56,7 @@ public partial class DiceView : ContentPage
         }
 
         resultString.Text = $"Foram jogados {quantity} dado(s) de {numberSides} lados.";
-        AllDicesResultLabel.Text = $"Resultado:\n\n{finalResult}\n"; ;
-        DicesSumLabel.Text = $"Soma: {total}";
+
 
     }
 

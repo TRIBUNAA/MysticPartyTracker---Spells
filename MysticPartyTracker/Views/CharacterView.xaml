@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MysticPartyTracker.Views.CharacterView"
+             Title="CharacterView">
+    <VerticalStackLayout
+        Padding="20,0"
+        Spacing="25">
+
+
+        <Label
+        Text="Level:"
+        x:Name="levelPersonagem"
+        HorizontalOptions="EndAndExpand"/>
+
+        <Entry
+        x:Name="entryNivel"
+        Placeholder="Nivel"
+        SemanticProperties.Hint="level"
+        WidthRequest="70"
+        HorizontalOptions="End"/>
+
+        <Label
+        Text="Nome do Personagem"
+        x:Name="nomePersonagem"
+        HorizontalTextAlignment="Center"/>
+
+        <Entry
+        x:Name="entryPersonagem"
+        Placeholder="Digite o nome aqui"
+        SemanticProperties.Hint="Type your name here"
+        WidthRequest="400"/>
+
+        <Label
+       Text="Classe do Personagem"
+       x:Name="classePersonagem"
+       HorizontalTextAlignment="Center"/>
+
+        <Picker x:Name="classePicker" SelectedItem="{Binding Class}" WidthRequest="400" HorizontalTextAlignment="Center" >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+
+                    <x:String>Bárbaro</x:String>
+                    <x:String>Rei</x:String>
+                    <x:String>Herói</x:String>
+                    <x:String>Assassino</x:String>
+                    <x:String>Guerreiro</x:String>
+                    <x:String>Mago</x:String>
+                    <x:String>Feitiçeiro</x:String>
+                    <x:String>Monge</x:String>
+                    <x:String>Necromante</x:String>
+                    <x:String>Clerigo</x:String>
+                    <x:String>Ladrão</x:String>
+                    <x:String>Caçador</x:String>
+
+
+
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label
+        Text="Raça do Personagem"
+        x:Name="racaPersonagem"
+        HorizontalTextAlignment="Center"/>
+
+        <Picker x:Name="RacaPicker" SelectedItem="{Binding Class}" WidthRequest="400"  HorizontalTextAlignment="Center">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Anjo</x:String>
+                    <x:String>Gigante</x:String>
+                    <x:String>Deus</x:String>
+                    <x:String>Goblin</x:String>
+                    <x:String>Demônio</x:String>
+                    <x:String>Elfo</x:String>
+                    <x:String>Fada</x:String>
+                    <x:String>Humano</x:String>
+                    <x:String>Orc</x:String>
+                    <x:String>Anão</x:String>
+                    <x:String>Golem</x:String>
+
+
+
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button 
+         x:Name="CreateBtn"
+         Text="Criar Personagem"
+         Command="{Binding RollCommand}"
+         BackgroundColor="Black"
+         WidthRequest="400"/>
+
+
+
+
+
+    </VerticalStackLayout>
+
+</ContentPage>

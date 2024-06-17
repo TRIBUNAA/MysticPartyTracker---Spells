@@ -1,17 +1,22 @@
-﻿namespace MysticPartyTracker.Models
-{
-    public class Dice
-    {
-        public int Side { get; set; }
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        public Dice(int side)
+namespace MysticPartyTracker.Models
+{
+    class Dice
+    {
+        public int Lados {  get; set; }
+        public Dice(int lados) 
         {
-            Side = side;
+            Lados = lados;
         }
 
-        public int Roll()
+        public int Roll() 
         {
-            return Random.Shared.Next(Side) + 1;
+          return new Random().Next(1, Lados) + 1;
         }
     }
 }

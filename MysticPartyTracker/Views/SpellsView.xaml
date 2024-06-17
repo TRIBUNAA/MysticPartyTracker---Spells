@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MysticPartyTracker.Views.SpellsView"
+             Title="SpellsView">
+    <VerticalStackLayout>
+        <Label 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <ListView x:Name="SpellsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell 
+                    Text="{Binding Name}"
+                    Detail="{Binding Level}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            
+    </VerticalStackLayout>
+
+   
+        
+</ContentPage>
+
+
+  
